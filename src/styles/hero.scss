@@ -5,9 +5,12 @@
   height: 95vh;
   padding: 20px;
   padding-left: 6rem;
-  background-color: #f4f4f4;
+  background-color: transparent;
   position: relative;
   overflow: hidden;
+  transform: skewY(-2deg);   /*works on Chrome, Edge */
+  -ms-transform: skewY(-2deg);       /* IE */
+  -webkit-transform: skewY(-2deg);
 }
 
 .image-container {
@@ -17,6 +20,9 @@
   width: 50%; /* Make sure the image container takes up 55% of the Book_Appointment section */
   position: relative;
   z-index: 1; /* Ensure images are above the background */
+  transform: skewY(2deg);   /*works on Chrome, Edge */
+  -ms-transform: skewY(2deg);       /* IE */
+  -webkit-transform: skewY(2deg); 
 }
 
 .image-column {
@@ -47,6 +53,9 @@
   width: 48%; /* Adjust the text container's width */
   text-align: left;
   z-index: 5;
+  transform: skewY(2deg);   /*works on Chrome, Edge */
+  -ms-transform: skewY(2deg);       /* IE */
+  -webkit-transform: skewY(2deg);   /* Safari */
 }
 
 .hero-text h1 {
@@ -61,34 +70,73 @@
   font-family: "Inter", sans-serif;
   font-size: 21px;
   color: #707070;
+  margin-bottom: 172px;
 }
 
 /* Search Bar */
 .search-bar {
   position: absolute;
-  bottom: 40px;
-  width: 100%;
+  bottom: 100px;
+  width: 86.5%;
+  height: 92px;
   display: flex;
   justify-content: center;
-  gap: 20px;
+  margin-left: 65px;
   max-width: 2400px;
   z-index: 10;
+  transform: skewY(2deg);   /*works on Chrome, Edge */
+  -ms-transform: skewY(2deg);       /* IE */
+  -webkit-transform: skewY(2deg);   /* Safari */
+  background-color: white;
+  border-radius: 15px;
 }
 
-.search-bar input {
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  width: 250px;
-}
-
-.search-bar button {
+.input-first {
+  font-size: 18px;
   padding: 10px 20px;
   border-radius: 5px;
   border: 1px solid #ccc;
-  background-color: #007bff;
+  width: 377px;
+  height: 60px;
+  margin-top: 17px;
+  margin-left: 17px;
+}
+
+.input-second {
+  font-size: 18px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 252px;
+  height: 60px;
+  margin-top: 17px;
+  margin-left: 11px;
+}
+
+.input-third {
+  font-size: 18px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 230px;
+  height: 60px;
+  margin-top: 17px;
+  margin-left: 11px;
+}
+
+.search-bar button {
+  font-size: 18px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;             /*Linear Color, in place of Solid color*/
+  background-image: linear-gradient(43deg, #0CB9B3 0%, #1173B3 100%);
   color: white;
   cursor: pointer;
+  height: 60px;
+  width: 157px;
+  margin-top: 17px;
+  margin-left: 12px;
+  border-radius: 10px;
 }
 
 @keyframes slide-top-to-bottom {
@@ -133,6 +181,6 @@
   color: transparent;
 }
 
-.find-now-button {              /*Linear Color, in place of Solid color*/
-  background-image: linear-gradient(43deg, #0CB9B3 0%, #1173B3 100%);
-}
+// .find-now-button {              /*Linear Color, in place of Solid color*/
+//   background-image: linear-gradient(43deg, #0CB9B3 0%, #1173B3 100%);
+// }
