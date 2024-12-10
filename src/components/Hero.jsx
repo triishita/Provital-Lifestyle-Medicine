@@ -36,7 +36,7 @@ const Hero = () => {
 
       {/* Right Side: "Book an appointment" Text */}
       <div className="hero-text">
-        <h1>Book an appointment with lifestyle medicine experts</h1>
+        <h1>Book an appointment with <span>lifestyle medicine</span> experts</h1>
         <p>Optimize your lifestyle and reverse chronic diseases.</p>
       </div>
 
