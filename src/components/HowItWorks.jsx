@@ -14,20 +14,10 @@ import heartIcon3 from "../assets/badge4.png";
 import timeIcon from "../assets/badge5.png";
 
 const HowItWorks = () => {
-  const [activeTab, setActiveTab] = useState("Nutrition");
-
-  const tabs = [
-    "Nutrition",
-    "Physical activity",
-    "Restorative sleep",
-    "Stress management",
-    "Social connection",
-    "Substance abuse",
-  ];
+  const [activeTab, setActiveTab] = useState("All");
 
   const cards = [
     {
-      id: 1,
       title: "Nutrition",
       description:
         "Evidence supports the use of a whole food, plant-predominant diet to prevent, treat, and reverse chronic illness.",
@@ -36,7 +26,6 @@ const HowItWorks = () => {
       badgeText: "121/80 mmHg",
     },
     {
-      id: 2,
       title: "Physical activity",
       description:
         "Regular physical activity is key to managing weight, improving mental health, and reducing the risk of chronic disease.",
@@ -45,7 +34,6 @@ const HowItWorks = () => {
       badgeText: "32 minutes",
     },
     {
-      id: 3,
       title: "Restorative sleep",
       description:
         "Consistent, quality sleep enhances brain function and physical recovery.",
@@ -54,7 +42,6 @@ const HowItWorks = () => {
       badgeText: "8 hours",
     },
     {
-      id: 4,
       title: "Stress management",
       description:
         "Effective stress management techniques are crucial for mental well-being and overall health.",
@@ -63,7 +50,6 @@ const HowItWorks = () => {
       badgeText: "60 bpm",
     },
     {
-      id: 5,
       title: "Social connection",
       description:
         "Strong social connections are associated with a lower risk of many chronic diseases and enhanced mental health.",
@@ -72,7 +58,6 @@ const HowItWorks = () => {
       badgeText: "Feeling better",
     },
     {
-      id: 6,
       title: "Substance abuse",
       description:
         "Avoiding tobacco, limiting alcohol use, and abstaining from harmful substances are vital for long-term health.",
@@ -86,36 +71,69 @@ const HowItWorks = () => {
     <section className="how-it-works">
       <div className="section-header">
         <h2>HOW IT WORKS</h2>
-        <h3><span className="subtitle">Lifestyle as medicine:</span> The six pillars</h3>
+        <h3>
+          <span className="subtitle">Lifestyle as medicine:</span> The six
+          pillars
+        </h3>
       </div>
 
       <div className="tabs">
-        {tabs.map((tab) => (
+        <button
+          className={`tab ${activeTab === "All" ? "active" : ""}`}
+          onClick={() => setActiveTab("All")}
+          aria-label="Show All"
+        >
+          All
+        </button>
+        {cards.map((card) => (
           <button
-            key={tab}
-            className={`tab ${activeTab === tab ? "active" : ""}`}
-            onClick={() => setActiveTab(tab)}
+            key={card.title}
+            className={`tab ${activeTab === card.title ? "active" : ""}`}
+            onClick={() => setActiveTab(card.title)}
+            aria-label={`Select ${card.title}`}
           >
-            {tab}
+            {card.title}
           </button>
         ))}
       </div>
 
-      <div className="cards">
-        {cards.map((card) => (
-          <div className="card" key={card.id}>
-            <img src={card.image} alt={card.title} />
-            <div className="card-overlay">
-              <span className="badge">
-                <img src={card.badgeIcon} alt="Badge Icon" />
-                {card.badgeText}
-              </span>
-              <h4>{card.title}</h4>
-              <p>{card.description}</p>
-            </div>
+      {activeTab === "All" ? (
+        <div className="carousel">
+          <div className="carousel-track">
+            {cards.map((card) => (
+              <div className="card" key={card.title}>
+                <img src={card.image} alt={card.title} />
+                <div className="card-overlay">
+                  <span className="badge">
+                    <img src={card.badgeIcon} alt="Badge Icon" />
+                    {card.badgeText}
+                  </span>
+                  <h4>{card.title}</h4>
+                  <p>{card.description}</p>
+                </div>
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
+        </div>
+      ) : (
+        <div className="cards">
+          {cards
+            .filter((card) => card.title === activeTab)
+            .map((card) => (
+              <div className="card" key={card.title}>
+                <img src={card.image} alt={card.title} />
+                <div className="card-overlay">
+                  <span className="badge">
+                    <img src={card.badgeIcon} alt="Badge Icon" />
+                    {card.badgeText}
+                  </span>
+                  <h4>{card.title}</h4>
+                  <p>{card.description}</p>
+                </div>
+              </div>
+            ))}
+        </div>
+      )}
     </section>
   );
 };

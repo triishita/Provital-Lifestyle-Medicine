@@ -1,59 +1,59 @@
 .how-it-works {
-  padding: 2rem;
-  padding-left: 6rem;
+  padding: 2rem 6rem;
   background-color: #f9f9f9;
 
   .section-header {
     text-align: left;
 
     h2 {
-      font-size: 1.5rem;
+      font-size: 1.8rem;
       color: #707070;
     }
 
     h3 {
       font-size: 2rem;
       color: #707070;
-      margin-top: 0.1rem;
+      margin-top: 0.5rem;
     }
   }
 
   .tabs {
     display: flex;
-    justify-content: left;
-    margin: 1.5rem 0;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 2rem 0;
 
     .tab {
       background-color: #fff;
       border: 1px solid #ddd;
       border-radius: 20px;
-      padding: 0.5rem 1rem;
-      margin: 0 0.5rem;
+      padding: 0.8rem 1.2rem;
       cursor: pointer;
-      font-size: 0.9rem;
+      font-size: 1rem;
       color: #707070;
+      transition: background-color 0.3s ease, color 0.3s ease;
 
       &.active {
-        background-color: #000;
+        background-color: #0b0b0b;
         color: #fff;
       }
 
       &:hover {
-        background-color: #f2f2f2;
+        background-color: #f0f0f0;
       }
     }
   }
 
   .cards {
     display: flex;
-    justify-content: center;
-    gap: 1.5rem;
+    flex-wrap: wrap; /* Ensure cards flow properly */
+    justify-content: flex-start; /* Align cards to the left */
 
     .card {
       background-color: #fff;
       border-radius: 10px;
-      overflow: hidden;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
       width: 300px;
       transition: transform 0.3s ease;
 
@@ -69,42 +69,128 @@
 
       .card-overlay {
         padding: 1rem;
+        text-align: left; /* Left-align all card content */
 
         .badge {
           display: flex;
           align-items: center;
           background-color: #f3f3f3;
           border-radius: 20px;
-          padding: 0.2rem 0.5rem;
-          margin-bottom: 0.5rem;
-          font-size: 0.8rem;
+          padding: 0.5rem 1rem;
+          margin-bottom: 1rem;
+          font-size: 0.9rem;
           color: #333;
 
           img {
             width: 16px;
             height: 16px;
-            margin-right: 0.3rem;
+            margin-right: 0.5rem;
           }
         }
 
         h4 {
-          font-size: 1.2rem;
+          font-size: 1.5rem;
           color: #000;
           margin: 0.5rem 0;
         }
 
         p {
-          font-size: 0.9rem;
+          font-size: 1rem;
           color: #666;
         }
       }
     }
   }
-}
 
-.subtitle {                          /*Text Linear Color, in place of Solid color*/
-  background: linear-gradient(289.5deg, #F1CA72 27.25%, #D96E6C 92.08%);
-  font-style: italic;
-  background-clip: text;
-  color: transparent;
+  .carousel {
+    overflow-x: scroll;
+    display: flex;
+
+    .carousel-track {
+      display: flex;
+      gap: 1rem;
+      padding-bottom: 1rem;
+    }
+
+    .card {
+      min-width: 300px; /* Ensures smooth horizontal scrolling */
+      scroll-snap-align: start;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      width: 300px;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: translateY(-10px);
+      }
+
+      img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .card-overlay {
+        padding: 1rem;
+        text-align: left; /* Left-align all carousel card content */
+
+        .badge {
+          display: flex;
+          align-items: center;
+          background-color: #f3f3f3;
+          border-radius: 20px;
+          padding: 0.5rem 1rem;
+          margin-bottom: 1rem;
+          font-size: 0.9rem;
+          color: #333;
+
+          img {
+            width: 16px;
+            height: 16px;
+            margin-right: 0.5rem;
+          }
+        }
+
+        h4 {
+          font-size: 1.5rem;
+          color: #000;
+          margin: 0.5rem 0;
+        }
+
+        p {
+          font-size: 1rem;
+          color: #666;
+        }
+      }
+    }
+  }
+
+  .subtitle {
+    background: linear-gradient(289.5deg, #f1ca72 27.25%, #d96e6c 92.08%);
+    font-style: italic;
+    background-clip: text;
+    color: transparent;
+  }
+
+  @media (max-width: 768px) {
+    padding: 2rem;
+
+    .tabs {
+      justify-content: center;
+    }
+
+    .carousel {
+      overflow-x: auto;
+    }
+
+    .cards {
+      flex-direction: column;
+    }
+
+    .card {
+      width: 100%;
+    }
+  }
 }
