@@ -4,6 +4,7 @@
   align-items: center;
   height: 95vh;
   padding: 50px;
+  padding-left: 6rem;
   background-color: #f4f4f4;
   position: relative;
   overflow: hidden;
@@ -12,7 +13,7 @@
 .image-container {
   display: flex;
   justify-content: space-between; /* Makes sure the columns are side by side */
-  gap: 20px; /* Add some gap between the two columns */
+  gap: 2px; /* Add some gap between the two columns */
   width: 50%; /* Make sure the image container takes up 55% of the Book_Appointment section */
   position: relative;
   z-index: 1; /* Ensure images are above the background */
@@ -43,7 +44,7 @@
 }
 
 .hero-text {
-  width: 50%; /* Adjust the text container's width */
+  width: 48%; /* Adjust the text container's width */
   text-align: left;
   z-index: 5;
 }
@@ -123,7 +124,7 @@
   }
 }
 
-span {                          /*Text Linear Color, in place of Solid color*/
+.hero-span {                          /*Text Linear Color, in place of Solid color*/
   background: linear-gradient(43deg, #1173B3 0%, #0CB9B3 100%);
   background-clip: text;
   color: transparent;

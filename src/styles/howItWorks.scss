@@ -1,25 +1,26 @@
 .how-it-works {
   padding: 2rem;
+  padding-left: 6rem;
   background-color: #f9f9f9;
 
   .section-header {
-    text-align: center;
+    text-align: left;
 
     h2 {
       font-size: 1.5rem;
-      color: #555;
+      color: #707070;
     }
 
     h3 {
-      font-size: 1.8rem;
-      color: #222;
-      margin-top: 0.5rem;
+      font-size: 2rem;
+      color: #707070;
+      margin-top: 0.1rem;
     }
   }
 
   .tabs {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     margin: 1.5rem 0;
 
     .tab {
@@ -30,7 +31,7 @@
       margin: 0 0.5rem;
       cursor: pointer;
       font-size: 0.9rem;
-      color: #666;
+      color: #707070;
 
       &.active {
         background-color: #000;
@@ -99,4 +100,11 @@
       }
     }
   }
+}
+
+.subtitle {                          /*Text Linear Color, in place of Solid color*/
+  background: linear-gradient(289.5deg, #F1CA72 27.25%, #D96E6C 92.08%);
+  font-style: italic;
+  background-clip: text;
+  color: transparent;
 }

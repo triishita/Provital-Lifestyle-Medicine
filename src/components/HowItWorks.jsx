@@ -86,7 +86,7 @@ const HowItWorks = () => {
     <section className="how-it-works">
       <div className="section-header">
         <h2>HOW IT WORKS</h2>
-        <h3>Lifestyle as medicine: The six pillars</h3>
+        <h3><span className="subtitle">Lifestyle as medicine:</span> The six pillars</h3>
       </div>
 
       <div className="tabs">
