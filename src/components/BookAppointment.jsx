@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import "../styles/hero.scss";
+import "../styles/bookAppointment.scss";
 
 // Import images
 import image1 from "../assets/image1.png";
