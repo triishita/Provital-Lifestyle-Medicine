@@ -38,10 +38,14 @@ const Navbar = () => {
           <button>Login/Signup</button>
           <ul className="dropdown-menu">
             <li>
-              <button>Doctor</button>
+              Doctor
+              <a href="/doctor-login" className="dropdown-link">Login</a>
+              <a href="/doctor-signup" className="dropdown-link">SignUp</a>
             </li>
             <li>
-              <button>Patient</button>
+              Patient
+              <a href="/patient-login" className="dropdown-link">Login</a>
+              <a href="/patient-signup" className="dropdown-link">SignUp</a>
             </li>
           </ul>
         </li>
