@@ -22,6 +22,7 @@ The task was to develop the frontend interface of the website based on the provi
 - **HTML/CSS**: For structuring and styling individual elements.
 
 ## Screenshots of my work
+
 ![Screenshot 2024-12-11 204441](https://github.com/user-attachments/assets/0a9dd0fc-65b1-42f4-9113-c3c11a12afa3)
 
 ![Screenshot 2024-12-11 204344](https://github.com/user-attachments/assets/9d1f3a22-a7c3-4e75-9b02-372c2c2d61d9)
