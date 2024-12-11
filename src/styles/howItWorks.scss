@@ -73,7 +73,8 @@
 
         .badge {
           display: flex;
-          align-items: center;
+          width: fit-content;
+          align-items: left;
           background-color: #f3f3f3;
           border-radius: 20px;
           padding: 0.5rem 1rem;
@@ -91,7 +92,7 @@
         h4 {
           font-size: 1.5rem;
           color: #121619;
-          margin: 0.5rem 0;
+          margin: 0.2rem 0;
         }
 
         p {
@@ -138,7 +139,8 @@
 
         .badge {
           display: flex;
-          align-items: center;
+          width: fit-content;
+          align-items: left;
           background-color: #f3f3f3;
           border-radius: 20px;
           padding: 0.5rem 1rem;
