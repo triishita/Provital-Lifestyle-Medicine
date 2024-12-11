@@ -1,6 +1,7 @@
 # Provital - Lifestyle Medicine
 
 This project showcases the frontend implementation of a responsive website built using **React** and **SCSS**.
+
 You can view the live version of the website here: [Provital Website](https://provitalwebsite.vercel.app/)
 
 The task was to develop the frontend interface of the website based on the provided Figma design. The goal was to translate the design specifications into a functional and responsive web interface, closely matching the provided desktop and mobile views. Figma design was as follows:
