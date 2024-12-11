@@ -1,6 +1,6 @@
 # Provital - Lifestyle Medicine
 
-This project showcases the frontend implementation of a responsive website built using **React** and **SCSS**. The assignment was designed to evaluate skills in frontend development, including responsiveness, UI design accuracy, and attention to animation details.
+This project showcases the frontend implementation of a responsive website built using **React** and **SCSS**.
 
 ## Overview
 
