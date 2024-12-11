@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import "../styles/bookAppointment.scss";
 import { BsSearch } from "react-icons/bs";
 import { IoLocationSharp } from "react-icons/io5";
-import { LiaAddressCardSolid } from "react-icons/lia"; 
+import { LiaAddressCardSolid } from "react-icons/lia";
 
 // Import images
 import image1 from "../assets/image1.png";
@@ -14,21 +14,21 @@ import image6 from "../assets/image6.png";
 import image7 from "../assets/image7.png";
 import image8 from "../assets/image8.png";
 
-function IconInput({ children, placeholder, type}) {    /* Ye Icon & Input at input Area */
-  return(
+function IconInput({ children, placeholder, type }) {
+  return (
     <div className="wrap">
       <div className="icon-wrap">{children}</div>
       <input type={type} placeholder={placeholder} />
     </div>
-  )
+  );
 }
-function ButtonIconInput({ children, text}) {    /* Ye Button pe Icon and Text*/
-  return(
+function ButtonIconInput({ children, text }) {
+  return (
     <div className="button-wrap">
       <div className="button-icon-wrap">{children}</div>
       <span className="button-text">{text}</span>
-    </div>  
-  )
+    </div>
+  );
 }
 
 const Hero = () => {
@@ -62,23 +62,23 @@ const Hero = () => {
 
       {/* Search Bar */}
       <div className="search-bar">
-        <div className="input-first">               {/* Ye Search Waala Icon and Input */}
-          <IconInput type="text"  placeholder= "    Condition, procedure, specialty...">
+        <div className="input-first">
+          <IconInput type="text" placeholder="    Condition, procedure, specialty...">
             <BsSearch />
           </IconInput>
         </div>
-        <div className="input-second">               {/* Location Walla Icon and Input */}
+        <div className="input-second">
           <IconInput type="text" placeholder="   City, state, zipcode">
             <IoLocationSharp />
           </IconInput>
         </div>
-        <div className="input-third">               {/* Card Icon and Input */}
+        <div className="input-third">
           <IconInput type="text" placeholder="   Insurance carrier">
             <LiaAddressCardSolid />
           </IconInput>
         </div>
         <div>
-          <ButtonIconInput text="Find now">      {/* Yaha Button with Safeed Search Symbol and Input */}
+          <ButtonIconInput text="Find now">
             <BsSearch />
           </ButtonIconInput>
         </div>
