@@ -1,6 +1,6 @@
 # Provital - Lifestyle Medicine
 
-This project showcases the frontend implementation of a responsive website built using **React** and **SCSS**.
+This project showcases the frontend implementation of a responsive website built using **React** and **CSS/SCSS**.
 
 You can view the live version of the website here: [Provital Website](https://provitalwebsite.vercel.app/)
 
